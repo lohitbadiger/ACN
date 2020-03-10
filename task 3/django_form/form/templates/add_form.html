@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block content%}
+{% load crispy_forms_tags %}
+<h1>
+ 
+
+    Want Add the New Info?
+  </h1>
+
+    <form method="POST">
+        {%csrf_token%}
+    
+    
+        {{form|crispy}}  
+    
+      
+
+        <button type="submit" class="btn btn-success mt-2">Success</button>
+
+     
+        </button>
+    </form>
+
+{%endblock %}
+  

@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+{%block content %}
+<form method="POST">
+    <p>Are you sure , want to delete  <b> <u>{{delete_info.name}}'s </u> </b>information from the database</p>
+{%csrf_token%}
+
+
+<button type='submit'>
+    Delete
+
+</button>   
+
+
+
+</form>
+{%endblock%}

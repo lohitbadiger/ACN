@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{%block content %}
+
+<div class="row pl-4">
+    <div class="col-md-3">
+        Name
+    </div>
+    <div class="col-md-3">
+        Phone
+    </div>
+    <div class="col-md-3">
+        Email
+    </div>
+</div>
+        {%for info in all_info %}
+        <div class="card-body border bg-dark text-warning">
+      
+        <div class="row ">
+          <div class="col-md-3">
+            {{info.name}} 
+          </div>
+          <div class="col-md-3">
+            {{info.phone}} 
+          </div>
+          <div class="col-md-3">
+            {{info.email}} 
+          </div>
+        <a class='btn btn-primary float-right ml-5'href="{%url 'update_info' info.id  %}">Update</a>
+        <a class='ml-3 btn btn-danger float-right'  href="{%url 'delete' info.id  %}">Delete</a>
+   </div>
+</div>
+
+  
+
+
+    {%endfor%}
+    <a href='{% url "create-form" %}' class='float-right mt-2 pt-1 btn btn-dark'>
+        Create New Info
+     </a>
+{%endblock%}

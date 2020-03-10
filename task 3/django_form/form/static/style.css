@@ -1,0 +1,8 @@
+
+/* custom css to hide the ext from the phone field */
+
+.phone-field-ext { display: none; }
+
+#id_phone_1{
+    display: none; 
+}
